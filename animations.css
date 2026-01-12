@@ -1,0 +1,22 @@
+/* Fade-in animation for components */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-fadein {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Optional: staggered animation for multiple components */
+.animated-fadein.delay-1 { animation-delay: 0.2s; }
+.animated-fadein.delay-2 { animation-delay: 0.4s; }
+.animated-fadein.delay-3 { animation-delay: 0.6s; }
+.animated-fadein.delay-4 { animation-delay: 0.8s; }
